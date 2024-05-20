@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Leave Management System</title>
+    <style>
+        /* Basic Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .leave-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+
+        .pending-requests {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table th, table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="leave_application.html">Apply for Leave</a></li>
+            <li><a href="pending_requests.php">Pending Requests</a></li>
+            <li><a href="manage_leave.php">Manage Leave</a></li>
+            <!-- Add more navigation links based on user roles -->
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="leave-form">
+        <h2>Leave Application</h2>
+        <form action="submit_leave.php" method="POST">
+            <label for="reason">Reason for Leave:</label>
+            <textarea id="reason" name="reason" required></textarea>
+            <!-- Other form fields -->
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+
+    <section class="pending-requests">
+        <h2>Pending Leave Requests</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Student ID</th>
+                    <th>Reason</th>
+                    <th>Date Requested</th>
+                    <th>Status</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Populate this table with pending leave requests -->
+                <!-- Use PHP to fetch and display leave requests -->
+            </tbody>
+        </table>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2023 Leave Management System</p>
+</footer>
+
+<script>
+    // Your JavaScript code can go here if needed
+    // For example, handling form submission or dynamic content loading
+</script>
+
+</body>
+</html>

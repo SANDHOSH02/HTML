@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Apply for Leave - Leave Management System</title>
+    <style>
+        /* Basic Styles */
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f2f2f2;
+            color: #333;
+        }
+
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        main {
+            padding: 20px;
+        }
+
+        .leave-form {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+        }
+
+        .leave-form label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .leave-form textarea {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 10px;
+            border-radius: 3px;
+            border: 1px solid #ccc;
+        }
+
+        .leave-form input[type="submit"] {
+            padding: 8px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="leave_application.html">Apply for Leave</a></li>
+            <li><a href="pending_requests.php">Pending Requests</a></li>
+            <li><a href="manage_leave.php">Manage Leave</a></li>
+            <!-- Add more navigation links based on user roles -->
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section class="leave-form">
+        <h2>Apply for Leave</h2>
+        <form action="submit_leave.php" method="POST">
+            <label for="reason">Reason for Leave:</label>
+            <textarea id="reason" name="reason" required></textarea>
+            
+            <label for="start_date">Start Date:</label>
+            <input type="date" id="start_date" name="start_date" required>
+            
+            <label for="end_date">End Date:</label>
+            <input type="date" id="end_date" name="end_date" required>
+            
+            <input type="submit" value="Submit">
+        </form>
+    </section>
+</main>
+
+<footer>
+    <p>&copy; 2023 Leave Management System</p>
+</footer>
+
+</body>
+</html>
